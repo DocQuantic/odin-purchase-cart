@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home component testing > renders page properly 1`] = `
+<div>
+  <h1>
+    Home
+  </h1>
+  <h2>
+    Who am I?
+  </h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum et ut ex beatae quam consequuntur eius eum aliquid illum non tenetur, perspiciatis quisquam error magni nostrum ipsam. Soluta voluptatem dolores fuga aliquam fugit totam nostrum quidem vitae eius eligendi? Autem facere nulla doloribus expedita consequatur. Cumque nobis veniam hic?
+  </p>
+  <h2>
+    What is sold on this website
+  </h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quo sit fuga voluptates hic velit aperiam totam omnis iste cumque animi repudiandae soluta doloribus rerum, a numquam obcaecati amet voluptas esse eaque similique placeat! Expedita corporis, at illo quisquam necessitatibus, assumenda fugit, dolores ab repellendus veniam quo. Obcaecati numquam ad iste, non architecto ex expedita harum? Illum incidunt nemo quod distinctio, eveniet provident quis laborum, eius, architecto molestiae voluptas delectus!
+  </p>
+  <h2>
+    My engagement
+  </h2>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, repellendus beatae dolores vel delectus pariatur laboriosam, expedita, praesentium deleniti at qui exercitationem illum explicabo in rerum? Voluptate accusantium dolorum corporis et illum, pariatur, deleniti ut ipsam, dolore sint ad deserunt. Ad esse dicta ut, at totam officiis aliquid. Ratione officia molestias sit rem dolores unde non beatae explicabo nobis incidunt.
+  </p>
+</div>
+`;

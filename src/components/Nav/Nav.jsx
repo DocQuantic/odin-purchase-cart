@@ -2,17 +2,19 @@ import { Link } from "react-router"
 
 const Nav = ({ linksArray }) => {
     return (
-        <div className="navBar">
+        <nav>
             <ul>
                 {
                     linksArray.map(link => {
-                        <li>
-                            <Link to={link.path}>{link.name}</Link>
-                        </li>
+                        return (
+                            <li key={link.path}>
+                                <a href={link.path}>{link.name}</a>
+                            </li>
+                        )
                     })
                 }
             </ul>
-        </div>
+        </nav>
     )
 }
 
