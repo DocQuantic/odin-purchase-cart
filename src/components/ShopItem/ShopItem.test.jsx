@@ -1,0 +1,6 @@
+const ShopItem = ({ product }) => {
+    return (
+        <>
+        </>
+    )
+}
