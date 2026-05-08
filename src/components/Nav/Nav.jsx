@@ -1,14 +1,15 @@
 import { Link } from "react-router"
+import * as styles from "./Nav.module.css";
 
 const Nav = ({ linksArray }) => {
     return (
-        <nav>
+        <nav className={styles.nav}>
             <ul>
                 {
                     linksArray.map(link => {
                         return (
                             <li key={link.path}>
-                                <a href={link.path}>{link.name}</a>
+                                <Link to={link.path}>{link.name}</Link>
                             </li>
                         )
                     })

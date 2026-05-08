@@ -1,34 +1,54 @@
-import './App.css'
-import { Route, Router, Link } from 'react-router'
-import Home from './components/Home/Home'
-import Shop from './components/Shop/Shop'
-import Cart from './components/Cart/Cart'
+import { Outlet } from "react-router"
+import { useEffect, useState } from "react";
+import Nav from "./components/Nav/Nav"
+import * as styles from "./App.module.css"
 
-function App() {
+const linksArray = [
+    {
+        name: "Home",
+        path: "/",
+    },
+    {
+        name: "Shop",
+        path: "/shop",
+    },
+    {
+        name: "Cart",
+        path: "/cart",
+    },
+]
 
-  return (
-    <Router>
-        <main>
-            <nav>
-                <ul>
-                    <li>
-                    <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                    <Link to="/shop">About</Link>
-                    </li>
-                    <li>
-                    <Link to="/cart">Contact</Link>
-                    </li>
-                </ul>
-            </nav>
+async function fetchData(url){
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch {
+    return { error: 'Something went wrong', reason: e.message };
+  }
+};
 
-            <Route path="/" exact component={Home} />
-            <Route path="/shop" component={Shop} />
-            <Route path="/cart" component={Cart} />
-        </main>
-    </Router>
-  )
+const products = await fetchData('https://fakestoreapi.com/products/')
+
+const App = () => {
+    const [cart, setCart] = useState([])
+
+    useEffect(() => {
+        if(cart.length !== 0){
+            document.querySelectorAll("a")[2].textContent = "Cart (" + cart.length + ")"
+        }
+    }, [cart])
+
+    return (
+        <div className={styles.app}>
+            <header>
+                <Nav linksArray={linksArray} />
+            </header>
+            <main>
+                <Outlet context={{products, cart, setCart}} />
+            </main>
+        </div>
+    )
 }
 
 export default App
