@@ -36,6 +36,8 @@ const App = () => {
     useEffect(() => {
         if(cart.length !== 0){
             document.querySelectorAll("a")[2].textContent = "Cart (" + cart.length + ")"
+        } else {
+            document.querySelectorAll("a")[2].textContent = "Cart"
         }
     }, [cart])
 

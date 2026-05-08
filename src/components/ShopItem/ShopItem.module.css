@@ -1,9 +1,9 @@
 .shopItem{
-    width: 300px;
+    width: 250px;
     background-color: antiquewhite;
     padding: 1rem;
     border-radius: 20px;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
 
     display: flex;
     flex-direction: column;
